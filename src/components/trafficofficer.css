@@ -1,0 +1,136 @@
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #302f2c;
+    text-align: center;
+    margin-left: 1rem;
+}  
+    .traffic{
+        display: flex;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+    }
+
+
+.addTraffics {
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; 
+    margin: auto;
+    justify-content: space-between;
+}
+
+.violationlabel {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 3rem;
+}
+
+.violationinput[type="text"],
+select {
+    lex-basis: calc(50% -10px);
+    margin: 4px 8px;
+    padding: 8px;
+    width: -moz-fit-content;
+    width: auto;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    line-height: 1;
+}
+
+select {
+    background-color: #fff;
+}
+
+.savebtn {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  
+  }
+  
+  .savebutton {
+    background-color: #007bff;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100px;
+    margin-left: 500%;
+  }
+  
+  .savebutton:hover {
+    background-color: #0062cc;
+  }
+ 
+  .removebutton {
+    background-color: #007bff;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100px;
+
+  }
+  
+  .removebutton:hover {
+    background-color: #0062cc;
+  }
+
+
+.violationsubmit[type="submit"] {
+    background-color: #2196f3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.violationsubmit[type="submit"]:hover {
+    background-color: #0d47a1;
+}
+.traffic-table table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.traffic-table table thead {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.traffic-table table th,
+td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+.traffic-table table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.traffic-table table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.traffic-table table tr:hover {
+    background-color: #ddd;
+}

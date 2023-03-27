@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url('background.png');
+			background-repeat: no-repeat;
+			background-size: cover; 
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1390px;
+    height: 40px;
+    background-color: #000;
+    margin-top: 0.5rem;
+}
+ 
+  .icon {
+    display: flex;
+    align-items: center;
+  }
+  
+ 
+  .navbar .icon img {
+    height: 50px;
+    vertical-align: middle;
+    margin-left: 5rem;
+
+  }
+ 
+  h2.text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #dfd2d2;
+    text-align: center;
+    margin-left: 1rem;
+  }
+
+.menu{
+    width: 400px;
+    height: 70px;
+    margin-right: 30%;
+  
+} 
+
+ul{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li{
+    list-style:none;
+    margin-left: 60px;
+    margin-top: 27px;
+    font-size: 15px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover{
+    color: #002aff;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    margin-left: 62%;
+    margin-top: 0.5rem;
+  } 
+  
+  /* Style for the search input field */
+  .searchbar input[type="text"] {
+    padding: 4px 5px;
+    border: none;
+    border-radius: 25px;
+    margin-right: 8px;
+    font-size: 16px;
+    width: 200px;
+  }
+  
+  
+   .searchbar button {
+    padding: 4px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 9px;
+    font-size: small;
+    cursor: pointer;
+  }  
+  
+  
+  .searchbarbutton:hover {
+    background-color: #0062cc;
+  }
+  .department-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 4rem;
+    margin-top: 2rem;
+    /* background-color: white; */
+    width: 65%;
+  }
+  
+  .dropdown-row {
+    
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: 10px;
+        justify-content: space-between;
+      }
+  
+  .dropdown-btn1 {
+    height: 50px;
+    background-color: #0c0c0c;
+    color: #fffcfc;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+   
+  }
+  .dropdown-btn1 {
+    height: 50px;
+    background-color: #0c0c0c;
+    color: #fffcfc;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+   
+  }
+  .dropdown-btn1 {
+    height: 50px;
+    background-color: #0c0c0c;
+    color: #fffcfc;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+   
+  }
+  .dropdown-btn1 {
+    height: 50px;
+    background-color: #0c0c0c;
+    color: #fffcfc;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+   
+  }
+  
+  .dropdown-btn1:hover {
+    background-color: #ddd;
+  }
+  
+  .Dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .Dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .Dropdown:hover .Dropdown-content {
+    display: block;
+  }
+  .picture {
+    width: 100%; /* set the width of the image container to 100% */
+    max-width: 600px; /* set the maximum width of the image container */
+    margin: 0 auto; /* center the image container horizontally */
+  }
+  
+  .picture img {
+    width: 100%; /* set the width of the image to 100% of its container */
+    height: auto; /* set the height of the image to adjust proportionally */
+    display: block; /* remove any default image spacing and allow for vertical alignment */
+  }
