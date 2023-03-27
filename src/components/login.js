@@ -53,6 +53,9 @@ const LoginPage = () => {
               <li>
                 <a href="#">Contact</a>
               </li>
+              <li>
+                <a href='#'>Sign up</a>
+              </li>
             </ul>
           </div>
           <div className="search-container">
