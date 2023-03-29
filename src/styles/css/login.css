@@ -1,0 +1,108 @@
+
+
+.logtxtcontainer {
+  margin-top: 7rem;
+  margin-left: 8rem;
+}
+
+.logtxtcontainer h1 {
+  font-size: 50px;
+  margin: 0;
+}
+
+.logtxtcontainer h1 span {
+  color: #c0c000;
+}
+
+.logtxtcontainer p {
+  font-size: 18px;
+  color: #181818;
+} 
+
+
+ .contentlog {
+  display: flex;
+}
+
+
+
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+span {
+  color: #3b3e42;
+}
+
+.par {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.formlog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10rem;
+  border: none;
+  border-radius: 12px;
+  background-color: #d3d371;
+  width: 370px;
+  height: 450px;
+  margin-top: 3rem;
+}
+
+.logintxt {
+  font-size: 30px;
+  font-weight: bold;
+ 
+}
+
+input {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  width: 70%;
+  background: transparent;
+  border-bottom: 1px solid #ff7200;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  /* color: #fff; */
+  font-size: 12px;
+  margin-top: 20px;
+
+}
+
+
+.log {
+  background-color: #55bcfb;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+ 
+}
+
+.log:hover {
+  background-color: #d17d7d;
+}
+
+.forget-container {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #000;
+}
+
+.forget-container a {
+  color: #4582d8;
+}
+
+a:hover {
+  color: #ffffff;
+} 

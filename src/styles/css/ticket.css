@@ -1,0 +1,83 @@
+.violationdiv {
+    margin: 20px;
+    width: 70%;
+    margin-left: 22rem;
+
+
+}
+.voilation-para h2{
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    margin-left: 17rem;
+}
+.addviolation {
+
+
+    background: linear-gradient(to bottom right, rgba(114, 57, 46, 0.404), rgba(190, 69, 25, 0.983));
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+
+
+}
+
+.violationlabel {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.form-sectionticketinfo,
+.form-sectionticketlocation {
+
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+
+}
+
+.addviolation input[type="text"],
+.addviolation select {
+
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+    background-color: rgba(227, 208, 208, 0.2);
+}
+
+
+.addviolation label {
+    width: -moz-fit-content;
+    /* width: fit-content; */
+    margin-left: auto;
+}
+.addviolation select {
+    background-color: #fff;
+}
+
+.violationsubmit[type="submit"] {
+    background-color: #2196f3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.violationsubmit[type="submit"]:hover {
+    background-color: #0d47a1;
+}
+
+.ticket-table {
+    width: 100%;
+    height: 80%;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
