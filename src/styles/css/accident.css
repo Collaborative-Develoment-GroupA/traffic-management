@@ -1,7 +1,7 @@
 .accidentbody {
     margin: 20px;
-    width: 1000px;
-    margin-left: 20rem;
+
+  
 
 }
 
@@ -12,7 +12,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.accidenth3 {
+.accident h3 {
     font-size: larger;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: brown;
@@ -22,7 +22,8 @@
     display: flex;
     margin-bottom: 20px;
     align-items: center;
-    margin-left: 3rem;
+    margin-left: 19rem;
+
 }
 
 .form-section label {
@@ -33,25 +34,30 @@
 
 .accidentuser {
     display: flex;
-    /* flex-direction: row; */
     gap: 50px;
     margin-bottom: 10px;
+    justify-content: space-evenly;
 
 }
+.falutdriverheading h3{
+    margin-left: 8rem;
+}
 
+.victimheading h3{
+ 
+        margin-left: 10rem;
+}
 
 .form-sectionfalut .falutdriverinputcontainer,
 .form-sectionvictim .victiminputcontainer {
     
-        display: grid;
-        align-items: center;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 5px;
-
-
-
-
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 25px;
 }
+
+
 
 .form-sectionfalut input,
 .form-sectionvictim input {
@@ -61,7 +67,7 @@
     width: 100%;
     padding: 10px;
     margin: 5px;
-    font-size: 16px;
+    font-size: 15px;
     background-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -76,7 +82,7 @@
     
     margin: 10px;
     padding: 8px;
-    /* width: 27%; */
+    width: 27%;
     border: none;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.2);
@@ -105,7 +111,7 @@
 .savebtn{
     
     
-    margin-left: 30%;
+    margin-left: 32%;
 }
 
 .removebutton,
@@ -115,12 +121,32 @@
     
 }
 
-/* .removebutton,
-.savebutton {
-    position: relative;
-    left: 37%;
-    right: 40%; */
+.descriptionform-section{
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    margin-left: 5rem;
+}
 
+
+
+.descriptionform-section textarea {
+    
+    margin: 10px;
+    padding: 8px;
+    width: 27%;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.descriptionform-section textarea {
+    width: 93%;
+    resize: vertical;
+}
 
 
 .removebutton,
@@ -149,5 +175,5 @@
     height: 100%;
     overflow-x: scroll;
     overflow-y: scroll;
-    margin-left: 20rem;
+
 };

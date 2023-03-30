@@ -18,8 +18,8 @@ export const Accidents = () => {
                             <input type="text" id="city" placeholder="City" name="city" required />
                             <input type="text" id="district" name="district" placeholder="District" required />
                             <input type="date" id="date" name="date" placeholder="Date" required />
-                            <label className='violationlabel' htmlFor="vehicle">Time:</label>
-                            <input type="time" id="time" name="time" placeholder="Time" required />
+                          
+                           
                         </div>
 
                     </div>
@@ -67,11 +67,7 @@ export const Accidents = () => {
                         </div>
 
                     </div>
-                    <div className="form-section">
-                        <input type="number" id="injuries" name="injuries" placeholder='Number of Injuries' required />
-
-                    </div>
-                    <div className="form-section">
+                    <div className="descriptionform-section">
                         <textarea id="description" name="description" rows="5" placeholder="Description" required></textarea>
                     </div>
 

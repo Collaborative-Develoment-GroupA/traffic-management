@@ -18,9 +18,9 @@ export const Officer = () => {
       <div className='traffic'>
 
         <form className='addTraffic'>
-          <div className="form-section">
+          <div className="officerform-section">
 
-            <div className="form-sectionbasicinfo">
+            <div className="officerform-sectionbasicinfo">
 
               <input placeholder='First Name' type="text" id="firstname" name="name" required />
               <input placeholder="Last Name" type="text" id="lastname" name="name" required />
@@ -28,8 +28,8 @@ export const Officer = () => {
 
             </div>
           </div>
-          <div className="form-section">
-            <div className="form-sectionjobinfo">
+          <div className="officerform-section">
+            <div className="officerform-sectionjobinfo">
 
               <input type="text" placeholder="ID" id="id" name="id" required />
               <input placeholder="Department" type="text" id="department" name="department" required />

@@ -84,6 +84,38 @@
 .violationsubmit[type="submit"]:hover {
     background-color: #0d47a1;
 }
+.addsavebtn .addsavebutton  {
+    padding: 10px;
+    background-color: #4850e3d1;
+    color: black;
+    width: 36%;
+    border: none;
+    border-radius: 12px;
+    font-size: bold;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left:350px;
+    margin-bottom: 1rem;
+
+} 
+.addsavebtn .addremovebutton  {
+    padding: 10px;
+    background-color: #4850e3d1;
+    color: black;
+    width: 36%;
+    border: none;
+    border-radius: 12px;
+    font-size: bold;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left:350px;
+
+} 
+
+
+button[type="submit"]:hover {
+    background-color:  #896e64;;
+}
 
 .ticket-table {
     width: 100%;
@@ -91,3 +123,4 @@
     overflow-x: scroll;
     overflow-y: scroll;
 }
+

@@ -33,7 +33,7 @@ export const Tickets = () => {
               <input type="text" id="ticketAddress" name="ticketAddress" placeholder="Address" required></input>
             </div>
           </div>
-          <div className="form-section">
+          <div className="addform-section">
 
 
             <div className="addform-sectionticketlocation">
@@ -44,8 +44,8 @@ export const Tickets = () => {
 
               <input type="text" id="district" name="district" placeholder="District" required />
               <input type="date" id="date" name="date" placeholder="Date" required />
-              <label htmlFor="vehicle">Time:</label>
-              <input type="time" id="time" name="time" placeholder="Time" required />
+              {/* <label htmlFor="vehicle">Time:</label>
+              <input type="time" id="time" name="time" placeholder="Time" required /> */}
             </div>
           </div>
 
@@ -55,12 +55,13 @@ export const Tickets = () => {
 
           <div className='addsavebtn'>
 
-            <button className="savebutton">SAVE</button>
+            <button className="addsavebutton">SAVE</button>
             <br />
-            <button className="removebutton">REMOVE</button>
+            <button className="addremovebutton">REMOVE</button>
           </div>
         </form>
         <div className='ticket-table'>
+         
           <table>
             <thead>
               <tr>
@@ -93,6 +94,7 @@ export const Tickets = () => {
           </table>
         </div>
       </div>
+   
     </>
   );
 }
