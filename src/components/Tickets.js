@@ -1,8 +1,9 @@
 import React from 'react'
-
+import Navbar from './Navbar';
 export const Tickets = () => {
   return (
     <>
+    <Navbar/>
     <div className= 'voilation-para'>
     <h2 className='text'>ADD OR REMOVE TICKET DETAILS </h2>
     </div>

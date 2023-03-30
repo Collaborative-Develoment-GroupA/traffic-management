@@ -4,21 +4,25 @@ import { Link } from 'react-router-dom';
 
 export const ResetPage = () => {
   return (
-    <div class="contentlog">
-      <div className='logtxtcontainer'>
+    <div className="contentlog">
+      <div classNameName='logtxtcontainer'>
 
 
       <h1>
         TRAFFIC <br /><span>MANAGEMENT</span> <br />SYSTEM
       </h1>
-      <p class="par">Welcome to the Traffic Management System (TMS). As a traffic officer you play a
-        <br /> critical role in ensuring the safety and smooth flow of traffic on our roads.
-        <br />We understand that your job can be challenging and stressful at times,
-        <br /> which is why we have developed this system to support you in your duties.</p>
+      <p className="par">Welcome to the Traffic Management System (TMS). As a 
+        <br /> traffic officer you play a critical role in ensuring the safety
+        <br /> and smooth flow of traffic on our roads. We understand that your 
+    
+        <br/>job can be challenging and stressful at times,  which 
+        <br />is why we have developed this system to support you in your duties.</p>
       </div>
+  
+          
 
-      <div class="formlog">
-        <h2 className='logintxt'>Code Verification</h2>
+      <div className="formlog">
+        <h2 classNameName='logintxt'>Reset</h2>
         <div className='paragraph'>
             <p>Create a new password that must contain 
             <br/>8 characters with combination of letters,

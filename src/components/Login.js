@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 export const Login = () => {
   return (
     <div className="contentlog">
-      <div classNameName='logtxtcontainer'>
+      <div class
+      Name='logtxtcontainer'>
 
 
       <h1>

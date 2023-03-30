@@ -1,4 +1,5 @@
-.App {
+
+.App { 
   text-align: center;
 }
 
@@ -175,9 +176,10 @@ h2.text {
 } 
 
 table {
-  border-collapse: collapse;
+  border-collapse: separate;
   margin-bottom: 20px;
   margin-top: 10px;
+  width: 980px;
 
 }
 

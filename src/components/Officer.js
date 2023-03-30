@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbar from './Navbar';
 
 export const Officer = () => {
   // const vehiclesData = [
@@ -9,6 +10,7 @@ export const Officer = () => {
 
   return (
     <>
+    <Navbar/>
     <div className='officer-heading'>
     <h2 className='text'>ADD OR REMOVE OFFICER DETAILS</h2>
     </div>
@@ -61,27 +63,35 @@ export const Officer = () => {
             <tbody>
               <tr>
                 <td>#12345</td>
-                <td>2023-03-21</td>
-                <td>15:30:00</td>
-                <td>KA 02 AB 1234</td>
-                <td>Speeding</td>
-                <td>$100</td>
+                <td>Nancy</td>
+                <td>Bhujel</td>
+                <td>1234- 1234</td>
+                <td>Thapathali</td>
+                <td>ofiicer</td>
               </tr>
               <tr>
-                <td>#12346</td>
-                <td>2023-03-22</td>
-                <td>08:45:00</td>
-                <td>KA 01 CD 5678</td>
-                <td>Red Light Violation</td>
-                <td>$150</td>
+              <td>#12345</td>
+                <td>Nancy</td>
+                <td>Bhujel</td>
+                <td>1234- 1234</td>
+                <td>Thapathali</td>
+                <td>ofiicer</td>
               </tr>
               <tr>
-                <td>#12347</td>
-                <td>2023-03-23</td>
-                <td>12:15:00</td>
-                <td>KA 03 EF 9101</td>
-                <td>Distracted Driving</td>
-                <td>$200</td>
+              <td>#12345</td>
+                <td>Nancy</td>
+                <td>Bhujel</td>
+                <td>1234- 1234</td>
+                <td>Thapathali</td>
+                <td>ofiicer</td>
+              </tr>
+              <tr>
+              <td>#12345</td>
+                <td>Nancy</td>
+                <td>Bhujel</td>
+                <td>1234- 1234</td>
+                <td>Thapathali</td>
+                <td>ofiicer</td>
               </tr>
             </tbody>
           </table>

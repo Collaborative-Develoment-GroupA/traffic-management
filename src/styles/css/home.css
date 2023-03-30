@@ -18,6 +18,16 @@
     margin-left: 20rem;
 }
 
+.graph {
+    height:50vh;
+    width: 500vh;
+    margin-bottom: 20px;
+    margin-left: 5rem;
+    background-image: url('../../../public/assest/images/graphTraffic.png');
+    background-size: cover;
+    background-position: center;
+}
+
 .stats {
     display: flex;
     flex-wrap: wrap;

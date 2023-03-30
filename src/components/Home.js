@@ -1,15 +1,19 @@
 import React from 'react'
-
+import Navbar from './Navbar';
+// import LineChart from './Line'
+import '../styles/css/home.css';
 export const Home = () => {
     return (
+        <>
+        <Navbar/>
+        
         <div className='homebody'>
             <div className="dashboard">
                 <h2>Dashboard</h2>
                 <div className="stats">
     
                     <div className="stat">
-                        <h3>Total Users</h3>
-                        <p>532</p>
+                     <p>532</p>
                     </div>
                     <div className="stat">
                         <h3>Total Violations</h3>
@@ -20,8 +24,11 @@ export const Home = () => {
                         <p>12</p>
                     </div>
                     <div className='graph'>
-                        <img src="asset/images/graphTraffic.png"  />
+                        {/* <img src='../../public/assest/images/graphTraffic.png'></img> */}
                     </div>
+                    {/* <div className='graph'>
+                        <LineChart />
+                    </div> */}
                 </div>
 
             </div>
@@ -37,10 +44,10 @@ export const Home = () => {
                 </div>
 
             </div>
-            </div>
+        </div>
 
 
+</>
 
-
-    )
+    );
 }

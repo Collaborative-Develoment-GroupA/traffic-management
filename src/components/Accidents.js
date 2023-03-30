@@ -1,9 +1,13 @@
 import React from 'react'
+import Navbar from './Navbar'
 
 export const Accidents = () => {
     return (
         <>
+        <Navbar/>
+        <div className='officer-heading'>
             <h2 className='text'>ADD OR REMOVE ACCIDENT DETAILS </h2>
+            </div>
             <div className='accidentbody'>
 
                 <form className='accidentform'>

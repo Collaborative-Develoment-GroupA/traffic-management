@@ -1,24 +1,31 @@
 import React from 'react';
-
+import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
 
 export const ForgetPage = () => {
   return (
-    <div class="contentlog">
-      <div className='logtxtcontainer'>
+    <>
+    <Navbar/>
 
-
-      <h1>
-        TRAFFIC <br /><span>MANAGEMENT</span> <br />SYSTEM
-      </h1>
-      <p class="par">Welcome to the Traffic Management System (TMS). As a traffic officer you play a
-        <br /> critical role in ensuring the safety and smooth flow of traffic on our roads.
-        <br />We understand that your job can be challenging and stressful at times,
-        <br /> which is why we have developed this system to support you in your duties.</p>
-      </div>
-
-      <div className="formlog">
-        <h2 className='logintxt'>Forget Password</h2>
+      <div className="contentlog">
+        <div classNameName='logtxtcontainer'>
+  
+  
+        <h1>
+          TRAFFIC <br /><span>MANAGEMENT</span> <br />SYSTEM
+        </h1>
+        <p className="par">Welcome to the Traffic Management System (TMS). As a 
+          <br /> traffic officer you play a critical role in ensuring the safety
+          <br /> and smooth flow of traffic on our roads. We understand that your 
+      
+          <br/>job can be challenging and stressful at times,  which 
+          <br />is why we have developed this system to support you in your duties.</p>
+        </div>
+    
+            
+  
+        <div className="formlog">
+          <h2 classNameName='logintxt'>Forget Password</h2>
         <div className='paragraph'>
             <p>Please enter the valid email to get the <br/>verification code for password reset.</p>
         </div>
@@ -37,5 +44,6 @@ export const ForgetPage = () => {
 
       </div>
     </div>
+    </>
   )
 }

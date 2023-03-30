@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import Navbar from './Navbar';
 
 export const Department = ({  onSelect }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,6 +15,8 @@ export const Department = ({  onSelect }) => {
     toggleMenu();
   };
   return (
+    <>
+    <Navbar/>
     <div className="dropdown">
       <button className="dropdown-toggle" onClick={toggleMenu}>
         {selectedOption ? selectedOption : 'Select an option'}
@@ -28,5 +31,6 @@ export const Department = ({  onSelect }) => {
         </ul>
       )}
     </div>
+    </>
   )
 }
