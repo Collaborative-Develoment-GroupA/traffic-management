@@ -11,10 +11,10 @@ export const Tickets = () => {
 
       <div className='violationdiv'>
 
-        <form className='addviolation'>
-          <div className="form-section">
+        <form className='violation'>
+          <div className="addform-section">
             
-            <div className="form-sectionticketinfo">
+            <div className="addform-sectionticketinfo">
 
               
               <select id="type" name="type">
@@ -27,16 +27,16 @@ export const Tickets = () => {
               <input type="text" id="ticketvehicleNumber" name="ticketvehicleNumber" placeholder="Vehicle Number" required />
 
               <input type="text" id="ticketName" name="ticketName" placeholder="Name " required />
-              <input type="email" id="ticketEmail" name="ticketEmail" placeholder="Email" required />
+              <input type="text" id="ticketEmail" name="ticketEmail" placeholder="Email" required />
 
-              <input type="tel" id="ticketPhone" name="ticketPhone" placeholder='Contact Number' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+              <input type="text" id="ticketPhone" name="ticketPhone" placeholder='Contact Number' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
               <input type="text" id="ticketAddress" name="ticketAddress" placeholder="Address" required></input>
             </div>
           </div>
           <div className="form-section">
 
 
-            <div className="form-sectionticketlocation">
+            <div className="addform-sectionticketlocation">
               
 
               <input type="text" id="city" placeholder="City" name="city" required />
@@ -53,7 +53,7 @@ export const Tickets = () => {
 
 
 
-          <div className='savebtn'>
+          <div className='addsavebtn'>
 
             <button className="savebutton">SAVE</button>
             <br />

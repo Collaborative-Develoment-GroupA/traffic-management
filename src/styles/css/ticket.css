@@ -1,7 +1,7 @@
 .violationdiv {
     margin: 20px;
-    width: 70%;
-    margin-left: 22rem;
+    width: 94%;
+    margin-left: 3rem;
 
 
 }
@@ -9,12 +9,12 @@
     font-size: 25px;
     font-weight: bold;
     color: black;
-    margin-left: 17rem;
+    
 }
-.addviolation {
+.violation {
 
 
-    background: linear-gradient(to bottom right, rgba(114, 57, 46, 0.404), rgba(190, 69, 25, 0.983));
+    background-color:rgba(252, 252, 252, 0.839);
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -27,37 +27,47 @@
     font-weight: bold;
     margin-top: 10px;
 }
+ .addform-section{
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    margin-left: 2rem;
+}
 
-.form-sectionticketinfo,
-.form-sectionticketlocation {
+ .addform-sectionticketinfo,
+ .addform-sectionticketlocation {
 
     align-items: center;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
 
+    
 }
 
-.addviolation input[type="text"],
-.addviolation select {
+.violation input[type="text"],
+.violation select {
 
     border-radius: 5px;
-    width: 100%;
+    width: 90%;
     padding: 10px;
     margin: 5px;
-    font-size: 16px;
+    font-size: 15px;
     background-color: rgba(227, 208, 208, 0.2);
 }
 
 
-.addviolation label {
+.violation label {
     width: -moz-fit-content;
     /* width: fit-content; */
     margin-left: auto;
 }
-.addviolation select {
+.violation select {
     background-color: #fff;
+    width: 350px;
+
 }
+
 
 .violationsubmit[type="submit"] {
     background-color: #2196f3;

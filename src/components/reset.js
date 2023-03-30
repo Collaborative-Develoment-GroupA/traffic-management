@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom';
 
 export const ResetPage = () => {
   return (
+    <>
+    <div className="log-icon">
+          <img src="assest/images/logo.png" alt="TMS" />
+          <h2 className="text">TRAFFIC MANAGEMENT SYSTEM</h2>
+        </div>
     <div className="contentlog">
       <div classNameName='logtxtcontainer'>
 
@@ -45,5 +50,6 @@ export const ResetPage = () => {
 
       </div>
     </div>
+    </>
   )
 }

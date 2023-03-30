@@ -1,12 +1,43 @@
-import React from 'react';
+import React,{useState} from 'react';
 
 import { Link } from 'react-router-dom';
 
 export const Login = () => {
+  const[email,setEmail]=useState('');
+  const[password,setPassword]=useState('');
+
+  const login=async(e)=>{
+    e.preventDefault();
+    console.log(email,password)
+    try {
+      const response = await fetch("http://localhost:8000/login/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({email, password}),
+      });
+      const data = await response.json();
+      if(data['success']===true){
+         return window.location.href = "/home";
+      }
+      else{
+          alert("Invalid Credentials");
+      }
+
+    } catch (error) {
+      console.log(error);
+      // Handle the error
+    }
+  }
   return (
+    <>
+    <div className="log-icon">
+          <img src="assest/images/logo.png" alt="TMS" />
+          <h2 className="text">TRAFFIC MANAGEMENT SYSTEM</h2>
+        </div>
     <div className="contentlog">
-      <div class
-      Name='logtxtcontainer'>
+      <div classNameName='logtxtcontainer'>
 
 
       <h1>
@@ -22,11 +53,11 @@ export const Login = () => {
   
           
 
-      <div className="formlog">
+      <div className="formlog" >
         <h2 classNameName='logintxt'>Log In</h2>
-        <input type="email" name="email" placeholder="Enter the email" />
-        <input type="password" name="password" placeholder="Enter the password" />
-        <button className="log" id="log"><Link to="/home">Login</Link></button>
+        <input type="email" name="email" placeholder="Enter the email" id='email' value={email} onChange={(e)=>setEmail(e.target.value)}/>
+        <input type="password" name="password" placeholder="Enter the password" id='password' value={password} onChange={(e)=>setPassword(e.target.value)}/>
+        <button className="log" id="log" onClick={login}>Login</button>
 
         <br /><br />
        <hr/>
@@ -35,5 +66,6 @@ export const Login = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }

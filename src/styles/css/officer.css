@@ -6,7 +6,7 @@
     font-size: 15px;
     font-weight: bold;
     color: black;
-    margin-left: 25px;
+    margin-left: 15rem;
 }
 
 
@@ -27,7 +27,7 @@
     display: flex;
     margin-bottom: 20px;
     align-items: center;
-    margin-left: 3rem;
+    margin-left: 2rem;
 }
 
 .form-sectionbasicinfo,
@@ -95,6 +95,6 @@ button[type="submit"]:hover {
     height: 100%;
     overflow-x: scroll;
     overflow-y: scroll;
-    margin-left: 18rem;
+    margin-left: 17rem;
 
 }

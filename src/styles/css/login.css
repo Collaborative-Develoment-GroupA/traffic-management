@@ -1,9 +1,26 @@
-
-
-.logtxtcontainer {
-  margin-top: 7rem;
-  margin-left: 8rem;
+.log-icon {
+  display: flex;
+    align-items: center;
+    margin-right: 25rem;
+    background-color: black;
+    width: 10000px;
 }
+
+.log-icon img {
+  height: 60px;
+  width: 60px;
+  vertical-align: middle;
+  margin-left: 3rem;
+ 
+
+}
+a{
+  text-decoration: none;
+}
+.logtxtcontainer{
+    margin-top: 7rem;
+}
+
 
 .logtxtcontainer h1 {
   font-size: 50px;
@@ -21,7 +38,8 @@
 
 .contentlog {
   display: flex;
-  margin-left: 17rem;
+  margin-left: 10rem;
+  margin-top: 2rem;
 }
 
 
@@ -32,7 +50,8 @@ h1 {
 }
 
 span {
-  color: #ffffff;
+  color: #d9d9d3;
+
 }
 
 .par {
@@ -49,10 +68,10 @@ span {
   margin-left: 7rem;
   border: none;
   border-radius: 12px;
-  background-color: #d3d371;
+  background-color: #d9d9d3;
   width: 370px;
   height: 450px;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .logintxt {
@@ -89,7 +108,7 @@ input {
 }
 
 .log:hover {
-  background-color: #d17d7d;
+  background-color: #1f3b7e;
 }
 
 .forget-container {
@@ -103,5 +122,5 @@ input {
 }
 
 a:hover {
-  color: #ffffff;
+  color: #0e64a5;
 } 

@@ -6,13 +6,17 @@ export const Home = () => {
     return (
         <>
         <Navbar/>
+        <div className='dash'>
+        <h2>Dashboard</h2>
+        </div>
         
         <div className='homebody'>
             <div className="dashboard">
-                <h2>Dashboard</h2>
+               
                 <div className="stats">
     
                     <div className="stat">
+                    <h3>Total Violations</h3>
                      <p>532</p>
                     </div>
                     <div className="stat">
