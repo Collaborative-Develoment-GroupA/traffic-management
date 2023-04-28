@@ -1,0 +1,23 @@
+{
+  "accidents": [
+    {
+      "id": 1,
+      "city": "Kathmandu",
+      "district": "Kathmandu",
+      "date": "2023-03-20",
+      "time": "10:08:03",
+      "fault_vehicle_number": "BA 1 2902",
+      "fault_driver_name": "Shikshya Maharjan",
+      "fault_driver_email": "shikshya@gmail.com",
+      "fault_driver_phone": "9874512348",
+      "fault_driver_address": "Sorakhute",
+      "victim_vehicle_number": "BA 1 3000",
+      "victim_name": "Sonam Kapoor",
+      "victim_email": "sonam@gmail.com",
+      "victim_phone": "9812345789",
+      "victim_address": "Basantapur",
+      "injuries": "Hand Fractured",
+      "description": "Due to sudden blindness"
+  }
+  ]
+}
