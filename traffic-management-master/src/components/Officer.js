@@ -3,14 +3,28 @@ import Navbar from './Navbar';
 
 
 export const Officer = () => {
+
+
+  const [showMessage, setShowMessage] = useState(false);
   const [firstname, setFirstName] = useState('');
   const [lastname, setLastName] = useState('');
   const [citizenship, setCitizenship] = useState('');
   const [officer_id, setOfficerId] = useState('');
   const [department, setDepartment] = useState('');
   const [post, setPost] = useState('');
-
   const [officers, setOfficers] = useState([])
+
+
+  
+    const handleAddClick = () => {
+      setShowMessage(true);
+      // code to add officer
+    };
+  
+    const handleRemoveClick = () => {
+      setShowMessage(true);
+      // code to remove officer
+    };
 
   useEffect(() => {
     const fetchOfficers = async () => {
@@ -81,13 +95,13 @@ export const Officer = () => {
           </div>
           <br />
 
-          <div className='officersavebtn'>
-
-            <button className="savebutton" >ADD</button>
-            <br />
-            <button className="removebutton">REMOVE</button>
-          </div>
-
+          <div className="officersavebtn">
+      <button className="savebutton" onClick={handleAddClick}>ADD</button>
+      <br />
+      <button className="removebutton" onClick={handleRemoveClick}>REMOVE</button>
+      {showMessage && <p>Officer {showMessage === "add" ? "added" : "removed"}!</p>}
+    </div>
+  
         </form>
 
         <div className='officer-table '>
