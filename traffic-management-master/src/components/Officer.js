@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from './Navbar';
-
+import Popup from './Popup';
 
 export const Officer = () => {
 
@@ -14,17 +14,18 @@ export const Officer = () => {
   const [post, setPost] = useState('');
   const [officers, setOfficers] = useState([])
 
+  const [buttonPopup,setButtonPopup]=useState(false);
+  const handleAddClick = () => {
+    // Code to add officer goes here
+    setShowMessage("add");
+  };
 
-  
-    const handleAddClick = () => {
-      setShowMessage(true);
-      // code to add officer
-    };
-  
-    const handleRemoveClick = () => {
-      setShowMessage(true);
-      // code to remove officer
-    };
+  const handleRemoveClick = () => {
+    // Code to remove officer goes here
+    setShowMessage("remove");
+  };
+
+ 
 
   useEffect(() => {
     const fetchOfficers = async () => {
@@ -38,7 +39,10 @@ export const Officer = () => {
       }
     };
     fetchOfficers();
+
+    
   }, []);
+ 
 
   const add = async (e) => {
     e.preventDefault();
@@ -65,8 +69,11 @@ export const Officer = () => {
     }
   }
 
+
+
   return (
     <>
+  
       <Navbar />
       <div className='officer-heading'>
         <h2 className='text'>ADD OR REMOVE OFFICER DETAILS</h2>
@@ -94,16 +101,23 @@ export const Officer = () => {
             </div>
           </div>
           <br />
-
           <div className="officersavebtn">
-      <button className="savebutton" onClick={handleAddClick}>ADD</button>
+      <button className="savebutton" onClick={handleAddClick}>
+        ADD
+      </button>
       <br />
-      <button className="removebutton" onClick={handleRemoveClick}>REMOVE</button>
-      {showMessage && <p>Officer {showMessage === "add" ? "added" : "removed"}!</p>}
+      <button className="removebutton" onClick={()=> setButtonPopup(true)}>REMOVE
+      
+      </button>
+
+   
     </div>
+    <Popup trigger={buttonPopup}>
+
+</Popup>
   
         </form>
-
+      
         <div className='officer-table '>
           <table>
             <thead>

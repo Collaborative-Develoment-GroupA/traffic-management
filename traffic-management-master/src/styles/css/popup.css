@@ -1,0 +1,45 @@
+
+.popup {
+    position: fixed;
+    top: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    border: none;
+    border-radius: 12px;
+    margin-left: 25rem;
+    margin-top: 15rem;
+    
+}
+
+.popup-inner {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 32px;
+    margin: 10px;;
+    background-color: beige;
+
+}
+
+.popup-inner .close-btn {
+    background-color: #2196f3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+
+
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: inherit;
+    cursor: pointer;
+
+}
+
+.success-message {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}

@@ -149,7 +149,7 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     width: 80%;
-    margin-left: 11rem;
+    margin-left: 8rem;
   }
   
   .accidenth3 {
@@ -245,7 +245,7 @@
     border-collapse: separate;
     margin-bottom: 20px;
     margin-top: 10px;
-    margin-left: 5rem;
+   
   }
   
   /* Media queries for smaller screens */

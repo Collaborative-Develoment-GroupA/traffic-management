@@ -1,11 +1,71 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import {Chart} from 'chart.js';
 import Navbar from './Navbar';
-
-// import Graph from './graph';
-
 import '../styles/css/home.css';
+
 export const Home = () => {
+  const [chartData, setChartData] = useState({});
+  useEffect(() => {
+    const fetchChartData = async () => {
+      const res = await fetch('https://example.com/api/accidents');
+      const data = await res.json();
+      setChartData(data);
+    };
+    fetchChartData();
+  }, []);
+
+  useEffect(() => {
+    const ctx = document.getElementById('myChart').getContext('2d');
+     // Destroy any existing chart instance
+    let myChart = Chart.getChart('myChart');
+    if (myChart) {
+        myChart.destroy();
+    }
+    new Chart(ctx, {
+      type: 'line',
+      data: chartData,
+      options: {
+        responsive: true,
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true,
+              fontColor: '#fff'
+            },
+            gridLines: {
+              display: true,
+              color: 'rgba(255,255,255,0.1)'
+            },
+            scaleLabel: {
+              display: true,
+              labelString: 'Number of Accidents',
+              fontColor: '#fff'
+            }
+          }],
+          xAxes: [{
+            ticks: {
+              fontColor: '#fff'
+            },
+            gridLines: {
+              display: true,
+              color: 'rgba(255,255,255,0.1)'
+            }
+          }]
+        },
+        legend: {
+          labels: {
+            fontColor: '#fff'
+          }
+        }
+      }
+    });
+  }, 
+  [chartData]);
+
+
+
     return (
+      
         <>
         <Navbar/>
        
@@ -29,11 +89,9 @@ export const Home = () => {
                         <p>12</p>
                     </div>
             <div className="dashboard">
-               {/* <div className='graph'>
-               <img src="../../../public/assest/images/graphTraffic.png"  />
-                    
-            </div> */}
-               
+                <canvas id="myChart"></canvas>
+              
+
             </div>
 
             </div>
@@ -42,28 +100,15 @@ export const Home = () => {
                     <p>News and Notices</p>
                 </div>
                 <div className='notice'>
-                <select id="type" name="type">
-                <option value="a">Officers updated post and posiitons</option>
-                </select>
-                <select id="type" name="type">
-                <option value="b">New post vacancy announcement</option>
-                </select>
-                <select id="type" name="type">
-                <option value="c">Ticket violations Rules</option>
-                </select>
+                    <select id="type" name="type">
+                    <option value="a">Officers updated post and positions</option>
+                    <option value="b">New post vacancy announcement</option>
+                    <option value="c">Ticket violations rules</option>
+                    </select>
                 </div>
-                
-                {/* <button className="dropdown-btn1">Recent accident in the area</button>
-                <div className="accident">
-                    <p>This method is often used by journalists to provide facts in their stories and it is
-                        <br /> the first step in crafting a product description.</p>
-                </div> */}
-
             </div>
         </div>
-
-
 </>
-
-    );
+);
 }
+            

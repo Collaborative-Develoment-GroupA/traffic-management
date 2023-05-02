@@ -10,6 +10,7 @@ import './styles/css/forgetpassword.css';
 import './styles/css/department.css';
 import './styles/css/code.css';
 import './styles/css/reset.css';
+import './styles/css/popup.css';
 
 
 

@@ -1,40 +1,80 @@
-.dropdown {
-  display: inline-block;
-  margin-left: 6rem;
-  margin-top: 6rem;
-  width: 211vh;
-  }
+ .departmentbody{
+  display: flex;
+    justify-content:space-around;
+    width: 100%;
+ }
+  .dropdown {
+    display: inline-grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    grid-gap: 20px;
+    width: 120vh;
+    margin-left: 10rem;
+}
   
-  .dropdown-toggle {
-    padding: 8px 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #fff;
-    font-size: 14px;
+.dropdown select {
+  margin: 10px 10px;
+  padding: 15px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+  
+  .dropdown select option {
+    background-color: #4850e3d1;
+    color: #fff;
+  }
+  .news-container {
+    width: 367px;
+    background-color: #302f2c48;
+    border-radius: 10px;
+    padding: 10px;
+    height: 70vh;
+    margin-top: 1rem;
+}
+
+
+.news-container .paragraph {
+    font-size: 24px;
+    font-weight: bolder;
+    color: rgba(23, 23, 23, 0.806);
+    text-align: center;
+    margin-left: 1rem;
+
+}
+
+
+.notice {
+    display: inline-grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    margin-top: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    grid-gap: 20px;
+    width: 60vh;
+}
+  
+  .notice select {
+    margin: 0 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 16px;
     cursor: pointer;
   }
   
-  .dropdown-menu {
-    
-    top: 100%;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+  .notice select option {
+    background-color: #4850e3d1;
+    color: #fff;
   }
-  
-  .dropdown-menu li {
-    padding: 8px 16px;
-    font-size: 14px;
-    cursor: pointer;
-  }
-  
-  .dropdown-menu li:hover {
-    background-color: #f2f2f2;
-  }
-  
