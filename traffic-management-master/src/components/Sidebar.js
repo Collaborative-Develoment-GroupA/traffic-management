@@ -17,12 +17,7 @@ export const Sidebar = [
     icon: <IoIcons.IoIosPaper />,
     cName: 'nav-text'
   },
-  {
-    title: 'Department',
-    path: '/departments',
-    icon: <FaIcons.FaCartPlus />,
-    cName: 'nav-text'
-  },
+
   {
     title: 'Ticket',
     path: '/tickets',

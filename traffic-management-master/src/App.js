@@ -7,7 +7,7 @@ import './styles/css/home.css';
 import './styles/css/ticket.css';
 import './styles/css/navbar.css';
 import './styles/css/forgetpassword.css';
-import './styles/css/department.css';
+
 import './styles/css/code.css';
 import './styles/css/reset.css';
 import './styles/css/popup.css';
@@ -30,7 +30,6 @@ import { Login } from './components/Login';
 // import { Register } from './components/Register';
 
 import Navbar from './components/Navbar';
-import { Department } from './components/Department';
 import { Tickets } from './components/Tickets';
 import { Officer } from './components/Officer';
 import {ForgetPage } from './components/forgetpassword';
@@ -47,7 +46,7 @@ function App() {
         <Route exact path="/" element={<Login />} />
         <Route exact path="/home" element={<Home />} />
         <Route exact path="/officer" element={<Officer />} />
-        <Route exact path="/departments" element={<Department />} />
+
         <Route exact path="/tickets" element={<Tickets />} />
         <Route exact path="/accidents" element={<Accidents />} />
         <Route exact path="/login" element={<Login />} />
@@ -55,8 +54,6 @@ function App() {
         <Route exact path="/code" element={<CodePage />} />
         <Route exact path="/reset" element={<ResetPage />} />
         <Route exact path="/login" element={<Login />} />
-
-        {/* <Route exact path="/register" element={<Register />} /> */}
       </Routes>
 
     </Router>
