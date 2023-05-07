@@ -73,16 +73,18 @@
     font-size: 16px;
     cursor: pointer;
     margin-left: 25rem;
+    margin-bottom: 10px;
     
 
 }
 
 
 
+
 button[type="submit"]:hover {
     background-color:  #b36347;;
 }
-.officersavebtn .popupbutton {
+/* .officersavebtn .popupbutton {
     display: grid;
     padding: 10px;
     background-color: #4850e3d1;
@@ -94,11 +96,9 @@ button[type="submit"]:hover {
     font-size: 16px;
     cursor: pointer;
     margin-left: 25rem;
-  }
+  } */
   
-  /* .officersavebtn .popupbutton:hover {
-    background-color: #b36347;
-  }
+ 
 
 .officer-table ,table {
     width: 100%;
@@ -107,7 +107,7 @@ button[type="submit"]:hover {
     overflow-y: scroll;
    
 
-} */
+} 
 
 .officer-table table{
     width: 1233px;

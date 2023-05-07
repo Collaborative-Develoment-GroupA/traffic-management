@@ -27,8 +27,6 @@ import { Home } from './components/Home';
 
 import { Accidents } from './components/Accidents';
 import { Login } from './components/Login';
-// import { Register } from './components/Register';
-
 import Navbar from './components/Navbar';
 import { Tickets } from './components/Tickets';
 import { Officer } from './components/Officer';
@@ -40,7 +38,7 @@ function App() {
       return (
     <Router>
     
-      {/* <Sidebar/> */}
+      
       
       <Routes>
         <Route exact path="/" element={<Login />} />

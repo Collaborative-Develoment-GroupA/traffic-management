@@ -1,24 +1,24 @@
-
 .popup {
     position: fixed;
     top: 0;
-    display: grid;
+    display: flex;
+    width: 70vh;
     justify-content: center;
     align-items: center;
     background-color: antiquewhite;
     border: none;
     border-radius: 12px;
-    margin-left: 25rem;
+    margin-left: 19rem;
     margin-top: 15rem;
-    
 }
-
 .popup-inner {
     position: relative;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    padding: 32px;
-    margin: 10px;;
+    grid-gap: 20px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 12px;
     background-color: beige;
 
 }
@@ -28,10 +28,10 @@
     color: #fff;
     border: none;
     border-radius: 5px;
-
-
+    margin-left: 6rem;
+    width: 20vh;
     padding: 10px;
-    margin-top: 10px;
+    
     font-size: 16px;
     font-family: inherit;
     cursor: pointer;
@@ -42,4 +42,9 @@
     font-size: 20px;
     font-weight: bold;
     padding: 10px;
+}
+.yesNo{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 15rem;
 }

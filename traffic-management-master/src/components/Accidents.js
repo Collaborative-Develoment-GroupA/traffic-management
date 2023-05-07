@@ -3,6 +3,7 @@ import Navbar from './Navbar'
 import { useEffect, useState } from 'react';
 
 
+
 export const Accidents = () => {
     const [city, setCity] = useState('');
     const [district, setDistrict] = useState('');
@@ -17,50 +18,72 @@ export const Accidents = () => {
     const [victim_name, setVictim_Name] = useState('');
     const [victim_email, setVictim_Email] = useState('');
     const [victim_phone, setVictim_Phone] = useState('');
-    const [victim_address, setVictimr_Address] = useState('');
+    const [victim_address, setVictim_Address] = useState('');
+    const[number_of_injuries, setNumberofInjuries] = useState('');
+  
+        const [AccidentData, setAccidentData] = useState(['']);
     
   
-    const [officer, setOfficer] = useState({})
-    const [accidentdata, accidentdatachange] = useState(null);
+        const handleAddClick = async (e) => {
+            e.preventDefault();
+        try {
+          const response = await fetch("https://simonpradhan.pythonanywhere.com/accidents/", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                city: city,
+                district: district,
+                date: date,
+                time: time,
+                fault_vehicle_number: fault_vehicle_number,
+                fault_driver_name: fault_driver_name,
+                fault_driver_email: fault_driver_email,
+                fault_driver_phone: fault_driver_phone,
+                fault_driver_address: fault_driver_address,
+                victim_vehicle_number: victim_vehicle_number,
+                victim_name: victim_name,
+                victim_email: victim_email,
+                victim_phone: victim_phone,
+                victim_address: victim_address,
+                 number_of_injuries: number_of_injuries
+            }),
+          });
+         const data = await response.json();
+      if (data['success'] === true) {
+        return window.location.href = "/accidents";
+      }
+      else {
+        alert("Invalid Credentials");
+      }
 
-    useEffect(() => {
-        fetch("https://simonpradhan.pythonanywhere.com/accidents/").then((res) => {
-            return res.json();
-        }).then((resp) => {
-            accidentdatachange(resp);
-            console.log(resp);
-        }).catch((err) => {
-            console.log(err.message);
-        })
-    }, [])
+    } catch (error) {
+      console.log(error);
+    
+    }
+  }
   
-    const add = async (e) => {
-      e.preventDefault();
-      console.log(city, district, date, time, fault_vehicle_number, fault_driver_name, fault_driver_email, fault_driver_phone, fault_driver_address, victim_vehicle_number, victim_name, victim_email, victim_phone, victim_address)  
 
+ 
+
+  useEffect(() => {
+    const fetchAccidentData= async () => {
       try {
-        const response = await fetch("https://simonpradhan.pythonanywhere.com//accident", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ city, district, date, time, fault_vehicle_number, fault_driver_name, fault_driver_email, fault_driver_phone, fault_driver_address, victim_vehicle_number, victim_name, victim_email, victim_phone, victim_address}),
-        });
+        const response = await fetch("https://simonpradhan.pythonanywhere.com/accidents/");
         const data = await response.json();
-        if (data['success'] === true) {
-          return window.location.href = "/accident";
-        }
-        else {
-          alert("Invalid Credentials");
-        }
-  
+        setAccidentData(data);
       } catch (error) {
         console.log(error);
-        // Handle the error
+      
       }
-    }
+    };
+    fetchAccidentData();
+}, []);
+    
     return (
         <>
+
         <Navbar/>
         <div className='officer-heading'>
             <h2 className='text'>ADD OR REMOVE ACCIDENT DETAILS </h2>
@@ -98,7 +121,7 @@ export const Accidents = () => {
                                 <input type="text" id="falutName" name="falutName" placeholder="Name " required />
                                 <input type="email" id="falutEmail" name="falutEmail" placeholder="Email" required />
 
-                                <input type="tel" id="falutPhone" name="falutPhone" placeholder='Contact Number' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+                                <input type="tel" id="falutPhone" name="falutPhone" placeholder='Contact Number'  required />
                                 <input type="text" id="falutAddress" name="falutAddress" placeholder="Address" required></input>
                             </div>
                         </div>
@@ -116,7 +139,7 @@ export const Accidents = () => {
                                 <input type="text" id="victimName" name="victimName" placeholder="Name " required />
                                 <input type="email" id="victimEmail" name="victimEmail" placeholder="Email" required />
 
-                                <input type="tel" id="victimPhone" name="victimPhone" placeholder='Contact Number' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+                                <input type="tel" id="victimPhone" name="victimPhone" placeholder='Contact Number'  required />
                                 <input type="text" id="victimAddress" name="victimAddress" placeholder="Address" required></input>
                             </div>
 
@@ -133,7 +156,7 @@ export const Accidents = () => {
                     </div>
 
                     <div className='accidentsavebtn'>
-                        <button className="savebtn">ADD</button>
+                        <button className="savebtn" onClick={handleAddClick}>ADD</button>
                         <br />
                         <button className="removebutton">REMOVE</button>
 
@@ -167,36 +190,30 @@ export const Accidents = () => {
                             </tr>
                         </thead>
                         <tbody>
-                        {accidentdata &&
-                                accidentdata.map(item => (
-                                    <tr key={item.id}>
-                                        <td>{item.id}</td>
-                                        <td>{item.city}</td>
-                                        <td>{item.district}</td>
-                                        <td>{item.date}</td>
-                                        <td>{item.time}</td>
-                                        <td>{item.fault_vehicle_number}</td>
-                                        <td>{item.fault_driver_name}</td>
-                                        <td>{item.fault_driver_email}</td>
-                                        <td>{item.fault_driver_phone}</td>
-                                        <td>{item.fault_driver_address}</td>
-                                        <td>{item.fault_driver_number}</td>
-                                        <td>{item.victim_name}</td>
-                                        <td>{item.victim_email}</td>
-                                        <td>{item.victim_phone}</td>
+                        {AccidentData.map(accidents => (
+                        <tr key={accidents.id}>
+                            <td>{accidents.city}</td>
+                            <td>{accidents.district}</td>
+                            <td>{accidents.date}</td>
+                            <td>{accidents.time}</td>
+                            <td>{accidents.fault_vehicle_number}</td>
+                            <td>{accidents.fault_driver_name}</td>
+                            <td>{accidents.fault_driver_email}</td>
+                            <td>{accidents.fault_driver_phone}</td>
+                            <td>{accidents.fault_driver_address}</td>
+                            <td>{accidents.fault_driver_number}</td>
+                            <td>{accidents.victim_name}</td>
+                            <td>{accidents.victim_email}</td>
+                            <td>{accidents.victim_phone}</td>
+                            <td>{accidents.injuries}</td>
+                            <td>{accidents.descriptions}</td>
+                            <td>
+                                <a className="btn btn-success">Add</a>
+                                <a className="btn btn-danger">Remove</a>
+                            </td>
+                        </tr>
+                    ))}
 
-                                        <td>{item.injuries}</td>
-                                        <td>{item.descriptions}</td>
-
-
-                                        
-                                        <td><a className="btn btn-success">Add</a>
-                                            <a className="btn btn-danger">Remove</a>
-                                           
-                                        </td>
-                                    </tr>
-                                ))
-                            }
                            
                         </tbody>
                     </table>
