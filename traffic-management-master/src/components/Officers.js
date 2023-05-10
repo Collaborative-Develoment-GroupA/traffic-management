@@ -4,6 +4,7 @@ import Popup from './Popup';
 
 export const Officer = () => {
 const [officers, setOfficers] = useState([]);
+
 const [values, setValues] = useState({
   firstname: "",
   lastname: "",
@@ -31,6 +32,7 @@ useEffect(() => {
       const response = await fetch("https://simonpradhan.pythonanywhere.com/officers/");
       const data = await response.json();
       setOfficers(data);
+      
     } catch (error) {
       console.log(error);
   
@@ -62,7 +64,8 @@ const handleAddClick = async (e) => {
 
     const data = await response.json();
     if (data['success']) {
-      return window.location.href = "/officer";
+      // return window.location.href = "/officers";
+      window.location.reload();
     } else {
       alert("Invalid Credentials");
     }

@@ -1,7 +1,8 @@
  .home-container{
    
     background-image: url('../../../public/assest/images/Desktop.png');
-    margin-left: 9rem;
+    box-shadow:0 0 5px #fff;
+    margin-left: 10rem;
     width: 172vh;
     height: 20vh;
     margin-top: 0.5rem;
@@ -17,9 +18,9 @@
 .homebody .dashboard {
     width: 105vh;
     height:50vh;
-    background-color: #fff;
+    background-color: #ffffffda;
     padding: 10px;
-    box-shadow: 0 1px 3px rgba(234, 44, 44, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 0 5px rgb(221, 203, 203);
     border-radius: 5px;
     margin-bottom: 10px;
   
@@ -41,7 +42,7 @@
 }
 
 .stat {
-    background-color: rgba(10, 37, 81, 0.721);
+    background-color: rgba(10, 37, 81, 0.555);
     
     line-height: 1px;
     border-radius: 5px;
@@ -50,7 +51,7 @@
     height: 80px;
     width: 216px;
     border: none;
-    box-shadow: 0 0 5px rgb(122 103 103);
+    box-shadow: 0 0 5px rgb(255, 253, 253);
 }
 
 .stat h3 {
@@ -67,12 +68,15 @@
 
 .news-container {
     width: 360px;
-    background-color: #302f2c48;
+    background-color:  #ffffffda;
     border-radius: 10px;
+    box-shadow: 0 0 5px rgb(241, 232, 232);
     padding: 5px;
     height: 65vh;
     margin-top: 1rem;
-    margin-right: 9rem;
+    margin-right: 5rem;
+    overflow-y: scroll;
+    overflow-x: scroll;
 }
 
 
@@ -94,7 +98,7 @@
     font-size: 15px;
     font-weight: bold;
     grid-gap: 20px;
-    width: 58vh;
+    width: 55vh;
 }
   
   .notice select {
@@ -109,8 +113,12 @@
     cursor: pointer;
   }
   
-  .notice select option {
+.notice select option {
     background-color: #4850e3d1;
     color: #fff;
   } 
+
+.news{
+    font-size: 10px;
+  }
 

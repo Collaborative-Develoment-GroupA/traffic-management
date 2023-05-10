@@ -29,10 +29,11 @@ import { Accidents } from './components/Accidents';
 import { Login } from './components/Login';
 import Navbar from './components/Navbar';
 import { Tickets } from './components/Tickets';
-import { Officer } from './components/Officer';
+import { Officer } from './components/Officers';
 import {ForgetPage } from './components/forgetpassword';
 import { CodePage } from './components/code';
 import { ResetPage } from './components/reset';
+
 
 function App() {
       return (
@@ -41,10 +42,10 @@ function App() {
       
       
       <Routes>
-        <Route exact path="/" element={<Login />} />
-        <Route exact path="/home" element={<Home />} />
-        <Route exact path="/officer" element={<Officer />} />
+      <Route exact path="/" element={<Login />} />
 
+        <Route exact path="/home" element={<Home />} />
+        <Route exact path="/officers" element={<Officer />} />
         <Route exact path="/tickets" element={<Tickets />} />
         <Route exact path="/accidents" element={<Accidents />} />
         <Route exact path="/login" element={<Login />} />

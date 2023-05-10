@@ -1,9 +1,22 @@
 import React from 'react';
 import Navbar from './Navbar';
+import { useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
 export const CodePage = () => {
+  const [otp,setOtp] =useState('');
+    const data=sessionStorage.getItem("otp");
+    const handleSubmit = async(e) =>{
+        e.preventDefault();
+        if(otp===data){
+
+            window.location.href="/reset";
+        }
+        else{
+            alert("OTP is wrong");
+        }
+    }
   return (
     <>
     <div className="log-icon">
@@ -31,9 +44,9 @@ export const CodePage = () => {
         <div className='paragraph'>
             <p>Enter the code sent to your provided <br/> email.If you didn't get the code<br/>please check your spam folder.</p>
         </div>
-        <input type="text" name="code" placeholder="Enter OTP Code" />
+        <input type="text" name="code" placeholder="Enter OTP Code" onChange={(e) => setOtp(e.target.value)}/>
        
-        <button class="log" id="codebtn"><Link to="/reset">Verify</Link></button>
+        <button class="log" id="codebtn"><Link to="/reset" onClick={handleSubmit}>Verify</Link></button>
 
         <br />
         {/* <div className="reset-container">

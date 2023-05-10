@@ -1,13 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 function Popup(props) {
-  // const { officers, onRemove } = props;
   const [buttonPopup, setButtonPopup] = useState(false);
   const popupRef = useRef();
 
-  // const handleRemove = () => {
-  //   setButtonPopup(false);
-  // };
+
 
   const handleClickOutside = (event) => {
     if (popupRef.current && !popupRef.current.contains(event.target)) {
@@ -25,11 +22,7 @@ function Popup(props) {
   
   }, []);
 
-  // const handleRemoveOfficer = (id) => {
-  //   onRemove(id);
-  //   setButtonPopup(false);
   
-  // };
 
   return props.trigger ? (
     <div className="popup" ref={popupRef}>

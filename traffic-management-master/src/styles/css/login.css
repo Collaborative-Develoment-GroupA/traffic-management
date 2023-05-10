@@ -19,7 +19,7 @@ a{
   text-decoration: none;
 }
 .logtxtcontainer{
-    margin-top: 7rem;
+    margin-top: 5rem;
 }
 
 
@@ -39,7 +39,7 @@ a{
 
 .contentlog {
   display: flex;
-  margin-left: 10rem;
+  margin-left: 12rem;
   margin-top: 2rem;
 }
 
@@ -51,7 +51,7 @@ h1 {
 }
 
 span {
-  color: #d9d9d3;
+  color: #ffffff;
 
 }
 
@@ -66,7 +66,7 @@ span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 7rem;
+  margin-left: 9rem;
   border: none;
   border-radius: 12px;
   background-color: #d9d9d3;

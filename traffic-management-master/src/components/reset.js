@@ -1,8 +1,42 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 export const ResetPage = () => {
+  const [newpass,setNewpass] =useState('');
+  const [newconfirmpass,setNewpasscon] = useState('');
+
+  const email=sessionStorage.getItem("email");
+  const handleSubmit = async(e) =>{
+      e.preventDefault();
+      console.log(newpass);
+      console.log(newconfirmpass);
+      if(newpass===newconfirmpass){
+          try {
+              const response = await fetch("https://simonpradhan.pythonanywhere.com/updatepass/", 
+              {
+              method: "POST",
+              headers: {
+                  "Content-Type": "application/json",
+              },
+              body: JSON.stringify({newpass,email}),
+              });
+              const data = await response.json();
+              console.log(data);
+              if (data.success) {
+              sessionStorage.removeItem("otp");
+              sessionStorage.removeItem("email");
+              window.location.href = "/";
+              }
+          } catch (err) {
+              console.log(err);
+          }
+      }
+  }
+
+
+
   return (
     <>
     <div className="log-icon">
@@ -34,10 +68,10 @@ export const ResetPage = () => {
             <br/>numbers and special characters(@!#$.)<br/>
             </p>
         </div>
-        <input type="password" name="password" placeholder="Enter the new password" />
-        <input type="password" name="password" placeholder="Re-enter the new password" />
+        <input type="password" name="password" placeholder="Enter the new password" onChange={(e) => setNewpass(e.target.value)}/>
+        <input type="password" name="password" placeholder="Re-enter the new password" onChange={(e) => setNewpasscon(e.target.value)}/>
        
-        <button class="log" id="resetbtn"><Link to="/login">Reset</Link></button>
+        <button class="log" id="resetbtn"><Link to="/login" onClick={handleSubmit}>Reset</Link></button>
 
         <br />
         {/* <div className="reset-container">

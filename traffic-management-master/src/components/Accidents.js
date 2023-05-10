@@ -55,7 +55,7 @@ export const Accidents = () => {
             });
                 const data = await response.json();
                 if (data['success'] === true) {
-                    return window.location.href = "/accidents";
+                    window.location.reload();
                 }
                 else {
                     alert("Invalid Credentials");
@@ -76,6 +76,7 @@ export const Accidents = () => {
                         const response = await fetch("https://simonpradhan.pythonanywhere.com/accidents/");
                         const data = await response.json();
                         setAccidentData(data);
+                        console.log(data);
                     } catch (error) {
                         console.log(error);
                     
@@ -170,7 +171,7 @@ export const Accidents = () => {
                     <table>
                         <thead>
                             <tr>
-                                <th>ID</th>
+                               
                                 <th>City</th>
                                 <th>District</th>
                                 <th>Date</th>
@@ -180,7 +181,7 @@ export const Accidents = () => {
                                 <th>Fault_Driver_Email</th>
                                 <th>Fault_Driver_Phone</th>
                                 <th>Fault_Driver_Address</th>
-                                <th>Victim_Vehicle_Number</th>
+                                <th>victim_vehicle_number </th>
                                 <th>Victim_Name</th>
                                 <th>Victim_Email</th>
                                 <th>Victim_Phone</th>
@@ -194,8 +195,7 @@ export const Accidents = () => {
   
                         {AccidentData &&
                             AccidentData.map((accident) => (
-                            <tr key={accident.id}>
-                            <td>{accident.id}</td>
+                            <tr >
                                 <td>{accident.city}</td>
                                 <td>{accident.district}</td>
                                 <td>{accident.date}</td>

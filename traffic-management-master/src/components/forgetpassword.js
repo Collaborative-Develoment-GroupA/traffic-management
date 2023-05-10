@@ -1,8 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
 
 export const ForgetPage = () => {
+const [email, setEmail] = useState('');
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("https://simonpradhan.pythonanywhere.com/forgetpass/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+      const data = await response.json();
+      console.log(data);
+      if (data.success) {
+        sessionStorage.setItem("otp", data.otp);
+        sessionStorage.setItem("email", email);
+        window.location.href = "/code";
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <>
      <div className="log-icon">
@@ -32,9 +55,9 @@ export const ForgetPage = () => {
         <div className='paragraph'>
             <p>Please enter the valid email to get the <br/>verification code for password reset.</p>
         </div>
-        <input type="email" name="email" placeholder="E-mail" />
+        <input type="email" name="email" placeholder="E-mail" onChange={(e) => setEmail(e.target.value)} />
        
-        <button class="log" id="forgetbtn"><Link to="/code">Send</Link></button>
+        <button class="log" id="forgetbtn"><Link to="/code" onClick={handleSubmit}>Send</Link></button>
 
         <br />
         <div className="forget-container">

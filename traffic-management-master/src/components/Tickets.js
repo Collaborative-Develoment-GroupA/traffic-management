@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import Navbar from "./Navbar";
-
+import Popup from './Popup';
 export const Tickets = () => {
+  
   const [ticket_type, setTicketType] = useState("");
   const [vehicle_number, setTicketVehicleNumber] = useState("");
   const [name, setTicketName] = useState("");
@@ -13,6 +14,7 @@ export const Tickets = () => {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [Tickets, setTickets] = useState([]);
+  const [buttonPopup,setButtonPopup]=useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,6 +27,7 @@ export const Tickets = () => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
+           
             ticket_type: ticket_type,
             vehicle_number: vehicle_number,
             name: name,
@@ -40,7 +43,7 @@ export const Tickets = () => {
       );
       const data = await response.json();
       if (data["success"] === true) {
-        return (window.location.href = "/tickets");
+        window.location.reload();
       } else {
         alert("Invalid Credentials");
       }
@@ -49,24 +52,7 @@ export const Tickets = () => {
     }
   };
 
-  // const handleRemove = async (ticketName) => {
-  //   try {
-  //     const response = await fetch(`https://simonpradhan.pythonanywhere.com/tickets/${ticketName}`, {
-  //     method: "DELETE",
-
-  //     });
-  //     const data = await response.json();
-  //     if (data['success'] === true) {
-  //       const updatedTickets = tickets.filter(ticket => ticket.name !== ticketName);
-  //       setTickets(updatedTickets);
-  //     } else {
-  //       alert("Failed to remove ticket");
-  //     }
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
+  
   useEffect(() => {
     const fetchTickets = async () => {
       try {
@@ -102,10 +88,7 @@ export const Tickets = () => {
                 <option value="Parking Violation">Parking Violation</option>
               </select>
 
-              <input
-                type="text"
-                id="ticketvehicleNumber"
-                name="ticketvehicleNumber"
+              <input type="text" id="ticketvehicleNumber"name="ticketvehicleNumber"
                 placeholder="Vehicle Number"
                 required
                 value={vehicle_number}
@@ -196,18 +179,24 @@ export const Tickets = () => {
             </div>
           </div>
 
-          <div className="addsavebtnticket">
-            <button className="savebutton" onClick={handleSubmit}>
-              SAVE
-            </button>
-            <br />
-            <button className="removebutton">REMOVE</button>
-          </div>
+          <div className="officersavebtn">
+              <button className="savebutton" onClick={handleSubmit}>
+                ADD
+              </button>
+              <button className="removebutton" onClick={(event) => {
+                event.preventDefault();
+                setButtonPopup(true)
+              }}>
+                REMOVE
+              </button>
+              <Popup trigger={buttonPopup}/>
+            </div>
         </form>
         <div className="ticket-table">
           <table>
             <thead>
               <tr>
+                <th>ID</th>
                 <th>Ticket Type</th>
                 <th>Vehicle Number</th>
                 <th>Name</th>
@@ -223,7 +212,8 @@ export const Tickets = () => {
             <tbody>
               {Tickets &&
                 Tickets.map((ticket) => (
-                  <tr key={ticket.ticket_type}>
+                  <tr>
+                    <td>{ticket.id}</td>
                     <td>{ticket.ticket_type}</td>
                     <td>{ticket.vehicle_number}</td>
                     <td>{ticket.name}</td>
